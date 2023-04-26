@@ -89,6 +89,10 @@ function reciever(){
 
                rcvmsg += 'V';
            }
+           if (receivedString == morsecode[22]) {
+
+               rcvmsg += 'W';
+           }
        }
           
        else{
