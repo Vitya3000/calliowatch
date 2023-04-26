@@ -56,7 +56,17 @@ basic.showString(rcvmsg);
 //Test
 if(mode==2){
 
-    basic.showString("TEST");
+    if(input.buttonIsPressed(Button.A)){ 
+        music.stopMelody(MelodyStopOptions.All)
+        music.playMelody("D E G E B - B A - D E G E A - A G - D E G E B - A F# - D - D A - G", 400);
+     }
+    if (input.buttonIsPressed(Button.B)) {
+        music.stopMelody(MelodyStopOptions.All)
+        music.playMelody("E5 D5 F#4 - G#4 - C#5 B4 D4 - E4 - B4 A4 C#4 - E4 - A4", 400);
+    }
+    
+    
+    
 }
 
 
