@@ -3,18 +3,67 @@ let msg ='';
 //convertiertes string
 let rcvmsg='';
 
+//var fuer modus
+let mode =0;
+
 
 
 
 radio.setGroup(177);
 basic.forever(function() {
+
+    input.onPinTouchEvent(TouchPin.P0, input.buttonEventDown(), function() {
+        rcvmsg = '';
+        basic.showString("");
+       mode=0;
+      
+    })
+    input.onPinTouchEvent(TouchPin.P1, input.buttonEventDown(), function () {
+        rcvmsg = '';
+        mode = 1;
+    })
+    input.onPinTouchEvent(TouchPin.P2, input.buttonEventDown(), function () {
+        rcvmsg = '';
+        mode = 2;
+    })
+
+    
+   //MainMenu
+if(mode ==0){
+
+    
+}
+
+
+
+
+
+
+
+
+//morsecode
+if(mode==1){ 
+   
+       
+    
     morse();
     reciever();
    
 basic.showString(rcvmsg);
-input.onPinTouchEvent(TouchPin.P0, input.buttonEventDown(), function() {
-    rcvmsg='';
-})
+
+}
+
+//Test
+if(mode==2){
+
+    basic.showString("TEST");
+}
+
+
+
+
+
+
 })
 
 
